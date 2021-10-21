@@ -1,0 +1,16 @@
+<form
+  [formGroup]="form"
+  (ngSubmit)="showRpta()"
+  style="width: 50%; margin: 10%"
+>
+  <div class="inline" style="display: flex">
+    <label for="">ITEM</label>
+    <app-select-custom
+      formControlName="item"
+      [data]="listaData"
+      style="width: 30%; margin-left: 25%"
+      [iconoDesplegable]="'/assets/img/arrow-select-icon.svg'"
+    ></app-select-custom>
+  </div>
+  <button type="submit">Mostrar</button>
+</form>

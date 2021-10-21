@@ -1,0 +1,12 @@
+<div class="content-textarea-custom">
+  <div
+    class="textarea-custom-with-badges"
+    [ngStyle]="{ height: rows + 'rem' }"
+    [innerHTML]="dataParseada"
+  ></div>
+  <textarea
+    (keyup)="escribiendo($event)"
+    (keyup.enter)="pressingEnter()"
+    [value]="value"
+  ></textarea>
+</div>

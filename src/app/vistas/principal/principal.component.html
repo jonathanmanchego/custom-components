@@ -1,0 +1,13 @@
+<div class="container">
+  <form [formGroup]="form" (ngSubmit)="save()">
+    <app-custom-text-area
+      [patron]="patrones"
+      formControlName="text"
+      [rows]="8"
+    ></app-custom-text-area>
+    <textarea></textarea>
+    <button type="submit">value</button>
+  </form>
+  <hr class="my-5" />
+  <app-custom-slide-images></app-custom-slide-images>
+</div>

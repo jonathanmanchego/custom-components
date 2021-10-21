@@ -1,0 +1,29 @@
+<div class="custom-select-container">
+  <div
+    class="custom-select-item-selected"
+    [class.list-open]="isOpen"
+    (click)="toggleList()"
+    style="--path-image: url({{ iconoDesplegable }})"
+  >
+    <span
+      class="item-selected-name"
+      [innerHTML]="itemSelected?.name || ''"
+    ></span>
+    <mat-icon *ngIf="itemSelected?.icono">{{ itemSelected?.icono }}</mat-icon>
+  </div>
+  <div
+    class="custom-select-items"
+    [class.isOpen]="isOpen"
+    [class.isClosed]="!isOpen"
+  >
+    <div
+      class="custom-select-item"
+      *ngFor="let item of data"
+      (click)="selectedValue(item.id)"
+      [class.selected-item]="item.id === value"
+    >
+      <span class="item-name" [innerHTML]="item.name"> </span>
+      <mat-icon *ngIf="item.icono">{{ item.icono }}</mat-icon>
+    </div>
+  </div>
+</div>

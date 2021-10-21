@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.patron-span {
+  display: inline;
+  padding: 3px;
+  background-color: #f5fafc;
+  box-shadow: 0 0 2px rgba(189, 189, 189, 0.067);
+  border-radius: 3px;
+}
